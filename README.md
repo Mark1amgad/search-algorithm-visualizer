@@ -46,7 +46,7 @@ python main.py
 
 ## Demo
 
-[▶ Watch Demo Video](Screen%20Recording.mp4)
+![Demo](demo.gif)
 
 ---
 
