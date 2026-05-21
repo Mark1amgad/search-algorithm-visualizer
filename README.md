@@ -1,35 +1,20 @@
-# 🔍 Search Algorithm Visualizer
+# Search Algorithm Visualizer
 
-> An interactive algorithm exploration platform for AIE111.  
-> Watch BFS, DFS, DLS, IDS, UCS, Greedy, and A\* search in real time —  
-> then compare them side-by-side with live metrics.
+An interactive platform for visualizing and comparing graph search algorithms in real time.
 
----
-
-## ✨ Features
-
-| Feature | Description |
-|---|---|
-| **7 Algorithms** | BFS, DFS, DLS, IDS, UCS, Greedy Best-First, A\* |
-| **Step-by-step animation** | Watch each algorithm explore the grid, one node at a time |
-| **Speed control** | 10 speed levels — from slow-motion to near-instant |
-| **Live metrics** | Nodes explored, path length, and execution time update in real time |
-| **Wall drawing** | Click and drag to draw/erase walls interactively |
-| **Maze generation** | Random obstacles or perfect recursive-backtracker mazes |
-| **Compare mode** | Run all 7 algorithms instantly and compare results in a table |
-| **Theory overlay** | Educational panel with complexity, completeness, and key idea |
-| **Keyboard shortcuts** | Full keyboard control for fast interaction |
+![Search Algorithm Visualizer UI](UI_Screenshot.png)
 
 ---
 
-## 🚀 Setup & Launch
+## Quick Start
 
-### Option 1 — Double-click (Windows)
+### Windows (Double-click)
 
-1. Double-click **`install.bat`** — installs dependencies (first time only)
-2. Double-click **`start.bat`** — launches the visualizer
+1. Clone the repository
+2. Double-click `install.bat` — installs dependencies (first time only)
+3. Double-click `start.bat` — launches the visualizer
 
-### Option 2 — Command line
+### Command Line
 
 ```bash
 pip install -r requirements.txt
@@ -43,7 +28,45 @@ python main.py
 
 ---
 
-## ⌨️ Keyboard Shortcuts
+## Features
+
+- **7 Search Algorithms** — BFS, DFS, DLS, IDS, UCS, Greedy Best-First, A*
+- **Interactive Visualization** — Watch algorithms explore the grid step-by-step
+- **Real-time Metrics** — Track nodes explored, path length, and execution time
+- **Speed Control** — 10 speed levels from slow-motion to near-instant
+- **Wall Drawing** — Click and drag to draw/erase walls interactively
+- **Maze Generation** — Random obstacles or perfect recursive-backtracker mazes
+- **Comparison Mode** — Run all 7 algorithms instantly and compare results
+- **Theory Overlay** — Educational panel with complexity, completeness, and key ideas
+- **Keyboard Shortcuts** — Full keyboard control for fast interaction
+
+---
+
+## Demo
+
+[▶ Watch Demo Video](Screen%20Recording.mp4)
+
+---
+
+## Supported Algorithms
+
+| Algorithm | Complete | Optimal | Time Complexity | Space Complexity |
+|-----------|-----------|---------|-----------------|------------------|
+| BFS | Yes | Yes (unweighted) | O(b^d) | O(b^d) |
+| DFS | No | No | O(b^m) | O(bm) |
+| DLS | No | No | O(b^l) | O(bl) |
+| IDS | Yes | Yes (unweighted) | O(b^d) | O(bd) |
+| UCS | Yes | Yes | O(b^(C*/e)) | O(b^(C*/e)) |
+| Greedy | No | No | O(b^m) | O(b^m) |
+| A* | Yes | Yes (admissible h) | O(b^d) | O(b^d) |
+
+> b = branching factor, d = depth of shallowest goal, m = maximum depth, l = depth limit, C* = cost of optimal solution, e = minimum edge cost
+
+---
+
+## Controls
+
+### Keyboard Shortcuts
 
 | Key | Action |
 |---|---|
@@ -56,66 +79,21 @@ python main.py
 | `T` | Toggle theory overlay for selected algorithm |
 | `ESC` | Close theory overlay |
 | `Q` | Exit application |
-| `1` – `7` | Select algorithm (BFS→DFS→DLS→IDS→UCS→Greedy→A\*) |
-| `S` + drag | Move the **Start** node |
-| `G` + drag | Move the **Goal** node |
+| `1` – `7` | Select algorithm (BFS → DFS → DLS → IDS → UCS → Greedy → A*) |
+| `S` + drag | Move the Start node |
+| `G` + drag | Move the Goal node |
 
----
-
-## 🖱️ Mouse Controls
+### Mouse Controls
 
 | Action | Effect |
 |---|---|
-| **Left-click drag** on grid | Draw walls |
-| **Right-click drag** on grid | Erase walls |
-| **Click** sidebar buttons | Select algorithm, control speed, run actions, exit |
+| Left-click drag on grid | Draw walls |
+| Right-click drag on grid | Erase walls |
+| Click sidebar buttons | Select algorithm, control speed, run actions, exit |
 
 ---
 
-## 📊 Algorithms Covered
-
-| Key | Algorithm | Complete | Optimal | Time | Space |
-|---|---|---|---|---|---|
-| 1 | BFS | ✅ Yes | ✅ Yes (unweighted) | O(b^d) | O(b^d) |
-| 2 | DFS | ❌ No | ❌ No | O(b^m) | O(bm) |
-| 3 | DLS | ❌ No | ❌ No | O(b^l) | O(bl) |
-| 4 | IDS | ✅ Yes | ✅ Yes (unweighted) | O(b^d) | O(bd) |
-| 5 | UCS | ✅ Yes | ✅ Yes | O(b^(C\*/e)) | O(b^(C\*/e)) |
-| 6 | Greedy | ❌ No | ❌ No | O(b^m) | O(b^m) |
-| 7 | A\* | ✅ Yes | ✅ Yes (admissible h) | O(b^d) | O(b^d) |
-
-> **DLS** runs with depth limit = 15 by default (configurable in `main.py`).
-
----
-
-## 🎨 Cell Color Legend
-
-| Color | Meaning |
-|---|---|
-| 🟢 Green | Start node |
-| 🔴 Red | Goal node |
-| 🔵 Blue | Visited node |
-| 🟡 Yellow/Amber | Frontier (open list) |
-| 🩵 Cyan | Current node being expanded |
-| 💚 Light green | Shortest path found |
-| ⬛ Dark | Wall |
-
----
-
-## 🔬 Compare Mode
-
-Press **`F`** (or click **Compare All**) to run all 7 algorithms on the current grid simultaneously.
-
-The sidebar shows a results table with:
-- **Nodes Explored** — how much of the grid each algorithm searched
-- **Path Length** — length of the solution found (✗ if not found)
-- **Time (ms)** — actual execution time
-
-**Best values are highlighted** in the table for easy comparison.
-
----
-
-## 🏗️ Architecture
+## Architecture
 
 ```
 search_visualizer/
@@ -129,31 +107,22 @@ search_visualizer/
 main.py             App loop, event handling, state machine
 ```
 
-### Module Responsibilities
+---
 
-| Module | Responsibility |
-|---|---|
-| `grid.py` | 2D grid, wall management, `generate_random_maze()`, `generate_recursive_maze()` |
-| `algorithms.py` | Generator-based BFS/DFS/DLS/IDS/UCS/Greedy/A\*, `AlgorithmState`, `run_algorithm_to_completion()` |
-| `renderer.py` | `GridRenderer.draw()`, `Colors` palette, header, legend |
-| `theory.py` | `ALGORITHM_INFO` dict with complexity + descriptions |
-| `ui.py` | `Button`, `SidebarPanel`, `TheoryOverlay` |
-| `main.py` | `App` class — event loop, `AppState` machine, wiring |
+## Team Project
+
+This project was developed collaboratively as part of a university AI/search algorithms course (AIE111 — Artificial Intelligence).
+
+The visualizer demonstrates practical implementation of graph search algorithms with emphasis on:
+- Algorithm behavior visualization
+- Performance comparison
+- Educational clarity
+- Clean software architecture
 
 ---
 
-## 📐 Metrics Explained
-
-| Metric | What it tells you |
-|---|---|
-| **Nodes Explored** | How many grid cells the algorithm examined before finding (or failing to find) a path. Lower = more efficient. |
-| **Path Length** | Number of steps in the solution path from Start to Goal. Lower = shorter path. |
-| **Time (ms)** | Wall-clock time for the algorithm to run. Useful for comparing computational overhead. |
-
----
-
-## 📁 Project Info
-
-- **Course**: AIE111 — Artificial Intelligence
-- **Topic**: Search Algorithms Analysis and Visualization
-- **Platform**: Python + Pygame
+### Author
+* **Mark Amgad Nassief Botros Mekhaiel**
+  * *Artificial Intelligence Engineering Student*
+  * *Faculty of Computer Science and Engineering*
+  * *New Mansoura University*
