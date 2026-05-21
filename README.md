@@ -30,15 +30,17 @@ python main.py
 
 ## Features
 
-- **7 Search Algorithms** — BFS, DFS, DLS, IDS, UCS, Greedy Best-First, A*
-- **Interactive Visualization** — Watch algorithms explore the grid step-by-step
-- **Real-time Metrics** — Track nodes explored, path length, and execution time
-- **Speed Control** — 10 speed levels from slow-motion to near-instant
-- **Wall Drawing** — Click and drag to draw/erase walls interactively
-- **Maze Generation** — Random obstacles or perfect recursive-backtracker mazes
-- **Comparison Mode** — Run all 7 algorithms instantly and compare results
-- **Theory Overlay** — Educational panel with complexity, completeness, and key ideas
-- **Keyboard Shortcuts** — Full keyboard control for fast interaction
+| Feature | Description |
+|---|---|
+| 7 Search Algorithms | BFS, DFS, DLS, IDS, UCS, Greedy Best-First, and A* |
+| Interactive Visualization | Watch algorithms explore the grid step-by-step in real time |
+| Real-time Metrics | Track nodes explored, path length, and execution time |
+| Speed Control | 10 speed levels from slow-motion to near-instant execution |
+| Wall Drawing | Click and drag to draw or erase walls interactively |
+| Maze Generation | Generate random obstacles or perfect recursive-backtracker mazes |
+| Comparison Mode | Run all 7 algorithms instantly and compare their results |
+| Theory Overlay | Educational panel with complexity, completeness, and key concepts |
+| Keyboard Shortcuts | Full keyboard-based interaction for fast control |
 
 ---
 
