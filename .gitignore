@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# IDE / Editor
+.vscode/
+.idea/
+*.suo
+*.user
+*.sln.docstates
+*.vsidx
+*.wsuo
+*.slnx.sqlite
+VSWorkspaceState.json
+DocumentLayout.json
+.DS_Store
+._.DS_Store
+._*
+
+# OS
+Thumbs.db
+desktop.ini
+
+# Pygame / runtime
+*.log
+
+# Project-specific
+*.zip
+*.docx
